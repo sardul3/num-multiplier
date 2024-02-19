@@ -13,11 +13,11 @@ This application provides a simple web interface to input a number, which is the
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-
+   git clone https://github.com/sardul3/num-multiplier.git
+   
 2.
    ```bash  
-   cd your-repo
+   cd num-multiplier
 3.
    ```bash
     mvn clean package
@@ -28,4 +28,4 @@ This application provides a simple web interface to input a number, which is the
 
 5.   
    ```bash
-    Access the application in your web browser at http://localhost:8080.
+    Access the application in your web browser at http://localhost:8080/home
