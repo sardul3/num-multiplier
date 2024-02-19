@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <title>Number Modifier</title>
-    </head>
-    <body>
-    <form action = "/home" method="POST">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Modifier</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Number Modifier</h1>
+    <form action="/home" method="POST">
         <label>
+            Enter a Number:
             <input type="number" name="num" required>
         </label>
         <button type="submit">Submit</button>
     </form>
 
-    <div th:if="${doubled != null}">
+    <div th:if="${doubled != null}" class="result">
         <p>Doubled Number: <span th:text="${doubled}"></span></p>
-        <p>Squared Doubled Number: <span th:text="${squaredDoubled}"></span></p>    </div>
-    </body>
-</html>
+        <p>Squared Doubled Number: <span th:text="${squaredDoubled}"></span></p>
+    </div>
 
+    <div th:if="${errorMessage}" class="error">
+        <p th:text="${errorMessage}" style="color: red;"></p>
+    </div>
+</div>
+</body>
+</html>
